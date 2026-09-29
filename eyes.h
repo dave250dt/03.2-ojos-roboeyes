@@ -29,23 +29,23 @@ inline void initEyes() {
 // TODO 3.2: Avanza la animación un paso sin bloquear; nunca envuelvas este paso en borrado/presentación ni en esperas.
 // Pregunta Guía: ¿Quién es dueño del borrado y la presentación del cuadro, tu código o la librería?
 inline void updateEyes() {
-    RoboEyes.update();
+    roboEyes.update();
 }
 
 // TODO 3.3: Aplica la expresión pedida por tecla (1 a 7) y restablece la base limpia antes de calibrar.
 // Pregunta Guía: ¿Qué cambia en pantalla entre una tecla y otra si la base no se restablece?
 inline void setEyesMood(char key) {
    roboEyes.setEyesMood(OFF);
-   switch (key) {
-    case '1': roboEyes.setMood(DEFAULT); break;
-        case '2': roboEyes.setMood(TIRED);   break;
+     switch (key) {
+        case '1': roboEyes.setMood(DEFAULT); break;
+        case '2': roboEyes.setMood(HAPPY);   break;
         case '3': roboEyes.setMood(ANGRY);   break;
-        case '4': roboEyes.setMood(HAPPY);   break;
-        case '5': roboEyes.setCuriosity(ON); break;
-        case '6': roboEyes.anim_confused();  break;
-        case '7': roboEyes.anim_laugh();     break;
-        default:  break; 
-   }
+        case '4': roboEyes.setMood(TIRED);   break;
+        case '5': roboEyes.setMood(SLEEPY);  break;
+        case '6': roboEyes.setMood(SCARY);   break;
+        case '7': roboEyes.setMood(CURIOUS); break;
+        default:  break;
+    }
 }
 
 #endif
